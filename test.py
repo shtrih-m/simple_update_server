@@ -30,9 +30,16 @@ r = requests.get('http://127.0.0.1:8888/version')
 check_answer_code(r.status_code)
 print_answer(r)
 
-print("=========== POST test ===========")
+print("=========== check_firmware POST test ===========")
 payload = {"build_date": "19.12.2017"}
 headers = {'content-type': 'application/json'}
 r = requests.post('http://127.0.0.1:8888/check_firmware', json=payload, headers=headers)
+check_answer_code(r.status_code)
+print_answer(r)
+
+print("=========== feature_licenses POST test ===========")
+payload = {"serial": "0000000000012345"}
+headers = {'content-type': 'application/json'}
+r = requests.post('http://127.0.0.1:8888/feature_licenses', json=payload, headers=headers)
 check_answer_code(r.status_code)
 print_answer(r)

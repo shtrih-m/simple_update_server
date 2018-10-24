@@ -6,3 +6,5 @@ CURRENT_FIRMWARE = {"version": 20180125, "description": 'super firmware 20180125
 CRITICAL_VERSION = 20171220
 # путь по которому нужно искать прошивки, абсолютный или относительно рабочей директориии
 FIRMWARE_PATH = "firmware"
+# путь до файла с функциональными лицензиями
+FEATURE_LICENSES_PATH = "licenses.slf"
